@@ -1,6 +1,6 @@
 import {getRepository} from 'typeorm'
 import {hash} from 'bcryptjs'
-import {User} from '../model/User'
+import {User} from '../models/User'
 
 interface UserData {
     name:string;

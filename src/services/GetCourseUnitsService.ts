@@ -1,5 +1,5 @@
 import { getRepository } from "typeorm"
-import { CourseUnit } from "../model/CourseUnit";
+import { CourseUnit } from "../models/CourseUnit";
 
 interface  UserId {
     id?: string;

@@ -19,16 +19,15 @@ const authController = new AuthController()
 
 const routes = Router();
 
+routes.post('/user', userController.create);
+routes.get('/user', authenticated, userController.show);
 
 routes.post('/auth',  authController.create);
 
-routes.get('/user', authenticated, userController.show);
+routes.post('/activy', authenticated, activyController.create);
 routes.get('/activy', authenticated, activyController.show);
+
+routes.post('/courseunit', authenticated, courseUnitController.create);
 routes.get('/courseunit', authenticated, courseUnitController.show);
-
-
-routes.post('/user', userController.create);
-routes.post('/activy', authenticated, userController.create);
-routes.post('/courseunit', authenticated, userController.create);
 
 export default routes;
