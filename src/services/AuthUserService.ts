@@ -32,13 +32,22 @@ class AuthUserService {
             }
         }
 
+        /*
+        const  { secret, expiresIn} = authConfig.jwt
+
+        const token = sign({"role":"user"},secret, {
+            subject: user.id,
+            expiresIn
+        }) */
+
+        
         const { privateKey, expiresIn } = authConfig.jwt;
 
         const token = sign({"role":"user"}, privateKey, {
             algorithm: 'RS256',
             subject: user.id,
             expiresIn
-        })
+        }) 
 
         const {id, name, email:emailUser} = user
 

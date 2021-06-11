@@ -1,4 +1,4 @@
-import {Router, Request, Response, response} from 'express';
+import {Router} from 'express';
 import {UserController} from './controller/UserController';
 import { ActivyController } from './controller/ActivyController';
 import {CourseUnitController} from './controller/CourseUnitController';
